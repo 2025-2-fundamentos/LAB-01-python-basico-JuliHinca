@@ -7,7 +7,17 @@ utilizar pandas, numpy o scipy.
 
 
 def pregunta_01():
-    """
+    with open("files\input\data.csv", "r") as file:
+        total = 0
+        for line in file:
+            parts = line.strip().split("\t")
+            total += int(parts[1])
+    return total
+
+if __name__ == "__main__":
+    total = pregunta_01()
+print(total)
+"""
     Retorne la suma de la segunda columna.
 
     Rta/
